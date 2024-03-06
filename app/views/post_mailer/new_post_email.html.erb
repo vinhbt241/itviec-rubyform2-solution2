@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <div>
+      <%= @content %>
+    </div>
+
+    <div>
+      <%= button_to 'Unsubscribe', unsubscribe_user_url(@user), method: :put %>
+    </div>
+  </body>
+</html>

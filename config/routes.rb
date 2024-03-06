@@ -7,4 +7,13 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
   # root "posts#index"
+
+  resources :users, only: [] do
+    member do
+      put 'unsubscribe'
+    end
+  end
+
+  get :unsubscribed, to: 'utilities#unsubscribed'
+  get :failed, to: 'utilities#failed'
 end
